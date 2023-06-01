@@ -11,3 +11,5 @@ for BOTH P1 and P2 (multiplayer is a separate thing, i am not going through the 
 
 - 3 vs 3: you select three fighters, and the other also selects 3. just like in 
 marvel vs capcom, capcom vs snk and skullgirls
+
+i'll say it again, i don't want to go through the hassle of implementing a fully fledged 2D-fighting game. that's maybe for a later date.
