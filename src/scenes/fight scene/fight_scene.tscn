@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5nhtc1aexe0v"]
+
+[ext_resource type="Texture2D" uid="uid://knh5dry215m8" path="res://src/scenes/fighter selection/sprites/portraits/fg-port-13.png" id="1_86sew"]
+[ext_resource type="Script" path="res://src/scenes/fight scene/fight_scene.gd" id="1_v6bc8"]
+
+[node name="fight_scene" type="Node2D"]
+script = ExtResource("1_v6bc8")
+
+[node name="p1_sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(255, 363)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_86sew")
+
+[node name="p2_sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(841, 354)
+scale = Vector2(-0.5, 0.5)
+texture = ExtResource("1_86sew")

@@ -1,0 +1,279 @@
+[gd_scene load_steps=31 format=3 uid="uid://cd3h6p5xga84s"]
+
+[ext_resource type="Texture2D" uid="uid://cb3xfaaheenms" path="res://src/scenes/fighter selection/sprites/icons/1.png" id="1_7yy0u"]
+[ext_resource type="Script" path="res://src/scenes/fighter selection/selection_screen.gd" id="1_g8swx"]
+[ext_resource type="Texture2D" uid="uid://bxv6hbdtsoa0r" path="res://src/scenes/fighter selection/sprites/icons/2.png" id="2_i2y0b"]
+[ext_resource type="Texture2D" uid="uid://b05suby3wtxd6" path="res://src/scenes/fighter selection/sprites/icons/2dfg_selection-Sheet.png" id="2_tly7g"]
+[ext_resource type="Texture2D" uid="uid://q7lbly7rqjik" path="res://src/scenes/fighter selection/sprites/icons/3.png" id="3_fa66a"]
+[ext_resource type="Script" path="res://src/scenes/fighter selection/selection_info.gd" id="3_pir80"]
+[ext_resource type="Texture2D" uid="uid://8nyskg2262gx" path="res://src/scenes/fighter selection/sprites/portraits/fg-port-2.png" id="4_6ejd4"]
+[ext_resource type="Texture2D" uid="uid://b6omw0tcm4kmd" path="res://src/scenes/fighter selection/sprites/icons/4.png" id="4_xjmjv"]
+[ext_resource type="Texture2D" uid="uid://dr7xuoyq03hu3" path="res://src/scenes/fighter selection/sprites/icons/5.png" id="5_mpb5y"]
+[ext_resource type="Texture2D" uid="uid://dtirk1er0i1lh" path="res://src/scenes/fighter selection/sprites/icons/6.png" id="6_c8hlk"]
+[ext_resource type="Texture2D" uid="uid://cmj160hw8yq0v" path="res://src/scenes/fighter selection/sprites/icons/7.png" id="7_ugmwn"]
+[ext_resource type="Texture2D" uid="uid://13xe4c5xos17" path="res://src/scenes/fighter selection/sprites/portraits/fg-port-3.png" id="8_2lumv"]
+[ext_resource type="Texture2D" uid="uid://dcjsyh80lo7s3" path="res://src/scenes/fighter selection/sprites/icons/8.png" id="8_lb0ou"]
+[ext_resource type="Texture2D" uid="uid://co1e18jh10l3i" path="res://src/scenes/fighter selection/sprites/icons/9.png" id="9_imkxf"]
+[ext_resource type="Texture2D" uid="uid://k0jrppj4w5bq" path="res://src/scenes/fighter selection/sprites/portraits/fg-port-4.png" id="10_6pvx8"]
+[ext_resource type="Texture2D" uid="uid://bpwuece00vvsw" path="res://src/scenes/fighter selection/sprites/icons/10.png" id="10_atdsy"]
+[ext_resource type="Texture2D" uid="uid://cyn0kjact2i25" path="res://src/scenes/fighter selection/sprites/icons/11.png" id="11_2yexo"]
+[ext_resource type="Texture2D" uid="uid://qx1vcr2w4q7d" path="res://src/scenes/fighter selection/sprites/icons/12.png" id="12_mpjmr"]
+[ext_resource type="Texture2D" uid="uid://cpp7aodvjqq66" path="res://src/scenes/fighter selection/sprites/portraits/fg-port-5.png" id="12_o6vmw"]
+[ext_resource type="Texture2D" uid="uid://btpjp2u05cxo7" path="res://src/scenes/fighter selection/sprites/portraits/fg-port-6.png" id="14_d6cds"]
+[ext_resource type="Texture2D" uid="uid://b51os52cydq57" path="res://src/scenes/fighter selection/sprites/portraits/fg-port-1.png" id="15_vou7j"]
+[ext_resource type="Texture2D" uid="uid://c4qga60xe1o3w" path="res://src/scenes/fighter selection/sprites/portraits/fg-port-7.png" id="16_r1ab5"]
+[ext_resource type="Texture2D" uid="uid://b2m0wibvn1sml" path="res://src/scenes/fighter selection/sprites/portraits/fg-port-8.png" id="18_8kr15"]
+[ext_resource type="Texture2D" uid="uid://ddk010vsiqnn6" path="res://src/scenes/fighter selection/sprites/portraits/fg-port-9.png" id="20_4w366"]
+[ext_resource type="Texture2D" uid="uid://dx2yi6kbgvgsj" path="res://src/scenes/fighter selection/sprites/portraits/fg-port-10.png" id="22_jtm2e"]
+[ext_resource type="Texture2D" uid="uid://dpt85gt20uc3a" path="res://src/scenes/fighter selection/sprites/portraits/fg-port-11.png" id="24_m0c1b"]
+[ext_resource type="Texture2D" uid="uid://dxb3ikientrt0" path="res://src/scenes/fighter selection/sprites/portraits/fg-port-12.png" id="26_dwmya"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1y3a"]
+atlas = ExtResource("2_tly7g")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4k43"]
+atlas = ExtResource("2_tly7g")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6734v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1y3a")
+}],
+"loop": true,
+"name": &"I",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4k43")
+}],
+"loop": true,
+"name": &"II",
+"speed": 5.0
+}]
+
+[node name="selection_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g8swx")
+
+[node name="p1_portrait_pos" type="Marker2D" parent="."]
+position = Vector2(200, 300)
+
+[node name="p1_portrait_sprite" type="Sprite2D" parent="p1_portrait_pos"]
+
+[node name="p2_portrait_pos" type="Marker2D" parent="."]
+position = Vector2(950, 300)
+scale = Vector2(-1, 1)
+
+[node name="p2_portrait_sprite" type="Sprite2D" parent="p2_portrait_pos"]
+
+[node name="selection_panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 400.0
+offset_right = -402.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="title" type="Label" parent="selection_panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -7.5
+offset_right = 7.5
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "--SELECT YOUR FIGHTER--"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="p1_name" type="Label" parent="selection_panel"]
+layout_mode = 0
+offset_left = -400.0
+offset_top = 600.0
+offset_right = -7.0
+offset_bottom = 650.0
+theme_override_font_sizes/font_size = 36
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="p2_name" type="Label" parent="selection_panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 8.0
+offset_top = 600.0
+offset_right = 402.0
+offset_bottom = 650.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 36
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="selection_grid" type="GridContainer" parent="selection_panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -168.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="GW" type="TextureRect" parent="selection_panel/selection_grid" groups=["Characters"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_7yy0u")
+script = ExtResource("3_pir80")
+portrait = ExtResource("15_vou7j")
+_name = "Greenwood"
+
+[node name="SA" type="TextureRect" parent="selection_panel/selection_grid" groups=["Characters"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("2_i2y0b")
+script = ExtResource("3_pir80")
+portrait = ExtResource("4_6ejd4")
+_name = "Steve Aleksei"
+
+[node name="RTP" type="TextureRect" parent="selection_panel/selection_grid" groups=["Characters"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("3_fa66a")
+script = ExtResource("3_pir80")
+portrait = ExtResource("8_2lumv")
+_name = "Rob the Painter"
+
+[node name="DD" type="TextureRect" parent="selection_panel/selection_grid" groups=["Characters"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("4_xjmjv")
+script = ExtResource("3_pir80")
+portrait = ExtResource("10_6pvx8")
+_name = "Dark Destroyer"
+
+[node name="HB" type="TextureRect" parent="selection_panel/selection_grid" groups=["Characters"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("5_mpb5y")
+script = ExtResource("3_pir80")
+portrait = ExtResource("12_o6vmw")
+_name = "Hustle-buster"
+
+[node name="RB" type="TextureRect" parent="selection_panel/selection_grid" groups=["Characters"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("6_c8hlk")
+script = ExtResource("3_pir80")
+portrait = ExtResource("14_d6cds")
+_name = "Roxx Bloxx"
+
+[node name="KB" type="TextureRect" parent="selection_panel/selection_grid" groups=["Characters"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("7_ugmwn")
+script = ExtResource("3_pir80")
+portrait = ExtResource("16_r1ab5")
+_name = "Killbot"
+
+[node name="GB" type="TextureRect" parent="selection_panel/selection_grid" groups=["Characters"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("8_lb0ou")
+script = ExtResource("3_pir80")
+portrait = ExtResource("18_8kr15")
+_name = "Goblin boy"
+
+[node name="DP" type="TextureRect" parent="selection_panel/selection_grid" groups=["Characters"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("9_imkxf")
+script = ExtResource("3_pir80")
+portrait = ExtResource("20_4w366")
+_name = "Dr. Poop"
+
+[node name="SM" type="TextureRect" parent="selection_panel/selection_grid" groups=["Characters"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("10_atdsy")
+script = ExtResource("3_pir80")
+portrait = ExtResource("22_jtm2e")
+_name = "Sgt. Mittens"
+
+[node name="OF" type="TextureRect" parent="selection_panel/selection_grid" groups=["Characters"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("11_2yexo")
+script = ExtResource("3_pir80")
+portrait = ExtResource("24_m0c1b")
+_name = "Orange-face"
+
+[node name="DB" type="TextureRect" parent="selection_panel/selection_grid" groups=["Characters"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("12_mpjmr")
+script = ExtResource("3_pir80")
+portrait = ExtResource("26_dwmya")
+_name = "Darkblade"
+
+[node name="p1" type="Marker2D" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(475, 156)
+
+[node name="sprite" type="AnimatedSprite2D" parent="p1"]
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_6734v")
+animation = &"I"
+
+[node name="p2" type="Marker2D" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(475, 156)
+
+[node name="sprite" type="AnimatedSprite2D" parent="p2"]
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_6734v")
+animation = &"II"
