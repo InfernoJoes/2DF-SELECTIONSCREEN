@@ -55,17 +55,6 @@ func _process(delta):
 	$p2_portrait_pos/p2_portrait_sprite.texture = chars[_p2_selected].portrait
 	$selection_panel/p2_name.text = chars[_p2_selected]._name
 	
-	# check the size of the grid container.
-	# TODO(DONE): move p1 cursor in a grid-like pattern, "highlighting" the icons as they move.
-	# TODO(DONE): if p1 or p2 moves to the end of the list, hop them back to the start
-	### TODO: fix error when moving DOWN or UP to the "end" of the list
-	
-	###### IDEA:
-	# DIVIDE THE ARRAY SIZE BY THE AMOUNT OF ROWS/COLUMNS
-	# not sure what i wrote here, but if i could move the cursor down one ROW, then it would probably work.
-	# a bug that i encountered some time ago would strangely move the selected spot to the right, when i went to the down-left-most selection and pressed up
-	
-	
 	#print("p1 selection: ", _p1_selected)
 	#print("p2 selection: ", _p2_selected)
 	
@@ -87,13 +76,6 @@ func _process(delta):
 		_p1_selected -= 1
 		p1_cursor.global_position = chars[_p1_selected].global_position
 	
-	if Input.is_action_just_pressed("m_up") and p1_active == true:
-		_p1_selected -= selection_grid.columns
-		p1_cursor.global_position = chars[_p1_selected].global_position
-	if Input.is_action_just_pressed("m_down") and p1_active == true:
-		_p1_selected += selection_grid.columns
-		p1_cursor.global_position = chars[_p1_selected].global_position
-	
 	# --PLAYER 2--
 	
 	if _p2_selected < -1:
@@ -106,13 +88,6 @@ func _process(delta):
 		p2_cursor.global_position = chars[_p2_selected].global_position
 	if Input.is_action_just_pressed("m_left") and p2_active == true:
 		_p2_selected -= 1
-		p2_cursor.global_position = chars[_p2_selected].global_position
-	
-	if Input.is_action_just_pressed("m_up") and p2_active == true:
-		_p2_selected -= selection_grid.columns # hardcoded value, deal with it for now
-		p2_cursor.global_position = chars[_p2_selected].global_position
-	if Input.is_action_just_pressed("m_down") and p2_active == true:
-		_p2_selected += selection_grid.columns # hardcoded value, deal with it for now
 		p2_cursor.global_position = chars[_p2_selected].global_position
 	
 	# --SELECTION MADE--
