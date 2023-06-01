@@ -14,3 +14,5 @@ now of course, you could make a whole game out of this. in that case, the charac
 if you did use any of my characters from this godot project, feel free to send me the project that you've used them in! i'd love to see what kinds of stuff you all do with them!
 
 i'd also love to hear some feedback on what i can do better with this project!
+
+i will eventually update this project depending on what i think is needed to implement, or not. don't expect an update.
