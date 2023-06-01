@@ -3,7 +3,7 @@
 a project i made to learn a little about character selection screens in various other fighting games that i've played.
 since i didn't find anything on 2D-fighter selection screens in godot (most of them were outdated and nothing pops up in the search results when i try to search), i decided to make my own, for others to use and apply to their games.
 
-i used some of kindosaurproductions' scripts as inspiration to this project
+i used some of kindosaurproductions' scripts as inspiration to this project.
 
 this is just an example of a fighter selection screen. it consists of a selection screen AND a fight screen, just to show off how information can be transfered through one scene to another.
 the key is to use a global script that basically takes in the data/information of the character we just selected, and uses it for something else. in this case, we only need to show off the portraits of the fighters we just selected in the selection scene, to the fight scene.
